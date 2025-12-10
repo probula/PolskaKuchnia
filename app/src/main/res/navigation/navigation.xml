@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/startFragment">
+    app:startDestination="@id/startFragment"
+
+    app:enterAnim="@anim/slide_in_right"
+    app:exitAnim="@anim/slide_out_left"
+    app:popEnterAnim="@anim/slide_in_left"
+    app:popExitAnim="@anim/slide_out_right"
+    >
 
     <fragment
         android:id="@+id/startFragment"
@@ -12,7 +19,11 @@
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_startFragment_to_menuChoiceFragment"
-            app:destination="@id/menuChoiceFragment" />
+            app:destination="@id/menuChoiceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/menuChoiceFragment"
@@ -21,10 +32,18 @@
         tools:layout="@layout/fragment_menu_choice" >
         <action
             android:id="@+id/action_menuChoiceFragment_to_readyMealFragment"
-            app:destination="@id/readyMealFragment" />
+            app:destination="@id/readyMealFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_menuChoiceFragment_to_customMealFragment"
-            app:destination="@id/customMealFragment" />
+            app:destination="@id/customMealFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/readyMealFragment"
@@ -33,7 +52,11 @@
         tools:layout="@layout/fragment_ready_meal" >
         <action
             android:id="@+id/action_readyMealFragment_to_summaryFragment"
-            app:destination="@id/summaryFragment" />
+            app:destination="@id/summaryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/customMealFragment"
@@ -42,7 +65,11 @@
         tools:layout="@layout/fragment_custom_meal" >
         <action
             android:id="@+id/action_customMealFragment_to_summaryFragment"
-            app:destination="@id/summaryFragment" />
+            app:destination="@id/summaryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
