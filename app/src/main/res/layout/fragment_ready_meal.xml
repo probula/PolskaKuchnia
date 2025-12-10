@@ -13,6 +13,22 @@
         android:layout_height="wrap_content"
         android:text="ready meal fragment"
         android:layout_gravity="center"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="danie1 - 25zl"
+            android:id="@+id/danie1"
+            android:layout_gravity="center"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="danie2 - 30zl"
+            android:id="@+id/danie2"
+            android:layout_gravity="center"/>
+    </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

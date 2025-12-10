@@ -13,6 +13,22 @@
         android:layout_height="wrap_content"
         android:text="custom meal"
         android:layout_gravity="center"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skladnik1"
+            android:text="skladnik1 - 10zl"
+            android:layout_gravity="center"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skladnik2"
+            android:text="skladnik2 - 5zl"
+            android:layout_gravity="center"/>
+    </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
