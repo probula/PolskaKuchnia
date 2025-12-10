@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.polskakuchniatradycyjna.R
+import com.example.polskakuchniatradycyjna.databinding.FragmentCustomMealBinding
 import com.example.polskakuchniatradycyjna.databinding.FragmentMenuChoiceBinding
-import com.example.polskakuchniatradycyjna.databinding.FragmentStartBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,12 +17,12 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [MenuChoiceFragment.newInstance] factory method to
+ * Use the [CustomMealFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MenuChoiceFragment : Fragment() {
+class CustomMealFragment : Fragment() {
 
-    private var _binding: FragmentMenuChoiceBinding? = null
+    private var _binding: FragmentCustomMealBinding? = null
     private val binding get() = _binding!!
 
     // TODO: Rename and change types of parameters
@@ -41,19 +41,16 @@ class MenuChoiceFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMenuChoiceBinding.inflate(inflater, container, false)
+        _binding = FragmentCustomMealBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.readyMeal.setOnClickListener {
-            findNavController().navigate(R.id.action_menuChoiceFragment_to_readyMealFragment)
-        }
-        binding.customMeal.setOnClickListener {
-            findNavController().navigate(R.id.action_menuChoiceFragment_to_customMealFragment)
-        }
+       binding.summaryFragment.setOnClickListener {
+           findNavController().navigate(R.id.action_customMealFragment_to_summaryFragment)
+       }
     }
 
     companion object {
@@ -63,12 +60,12 @@ class MenuChoiceFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment MenuChoiceFragment.
+         * @return A new instance of fragment CustomMealFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            MenuChoiceFragment().apply {
+            CustomMealFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

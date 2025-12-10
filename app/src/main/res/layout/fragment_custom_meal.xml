@@ -4,25 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".ui.MenuChoiceFragment">
+    tools:context=".ui.CustomMealFragment"
+    android:orientation="vertical">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wybierz tryb"/>
-
+        android:text="custom meal"
+        android:layout_gravity="center"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gotowe dania"
-        android:id="@+id/readyMeal"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Komponuj swoje dania"
-        android:id="@+id/customMeal"/>
+        android:layout_gravity="center"
+        android:text="podsumowanie"
+        android:id="@+id/summaryFragment"/>
 
 </LinearLayout>
