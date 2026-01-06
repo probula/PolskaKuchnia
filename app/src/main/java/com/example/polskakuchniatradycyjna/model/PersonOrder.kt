@@ -1,5 +1,5 @@
 package com.example.polskakuchniatradycyjna.model
 
-data class PersonOrder {
-    val readyMeal1:
-}
+data class PersonOrder (
+    val readyMeal1: String
+)
