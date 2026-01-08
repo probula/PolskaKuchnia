@@ -15,12 +15,7 @@ class OrderViewModel : ViewModel() {
 
     fun confirmPersonOrder() {
         order.personOrders.add(currentPersonOrder)
-        currentPersonOrder = PersonOrder()
     }
 
 
-    fun clearAll() {
-        order = Order()
-        currentPersonOrder = PersonOrder()
-    }
 }

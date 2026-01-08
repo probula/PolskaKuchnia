@@ -19,13 +19,20 @@ class SummaryFragment : Fragment(R.layout.fragment_summary) {
         _binding = FragmentSummaryBinding.bind(view)
 
         val sb = StringBuilder()
+        var totalOrderPrice: Double = 0.0
         viewModel.order.personOrders.forEachIndexed { index, person ->
             sb.append("Osoba ${index + 1}:\n")
             sb.append("Danie: ${person.mainDishName ?: "-"}\n")
             sb.append("Cena: ${person.mainDishPrice} zł\n\n")
+            sb.append("Suma osoby: ${person.totalPrice} zł\n\n")
+
+            totalOrderPrice += person.totalPrice
         }
 
-        binding.summaryText.text = sb.toString()
+        sb.append("Łączna kwota zamówienia: ${totalOrderPrice} zł")
+        binding.summaryText.text = sb
+
+
     }
 
     override fun onDestroyView() {
